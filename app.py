@@ -25,7 +25,7 @@ def generate_questions(text, generator):
     return questions
 
 # Load the model pipeline (cached for efficiency)
-st.cache_resource
+@st.cache_resource
 def load_generator():
     return pipeline(model="mrm8488/t5-base-finetuned-question-generation-ap")
 
